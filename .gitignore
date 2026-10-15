@@ -1,0 +1,41 @@
+# === Compilación Backend (Java / Spring Boot) ===
+**/target/
+*.class
+.mvn/
+mvnw
+mvnw.cmd
+HELP.md
+pedidos360.db
+
+# === IDEs y Editores ===
+.idea/
+*.iws
+*.iml
+*.ipr
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated
+.springBeans
+.sts4-cache
+.vscode/
+
+# === Sistema Operativo ===
+.DS_Store
+Thumbs.db
+
+# === Dependencias y Build Frontend (Node / React) ===
+**/node_modules/
+**/dist/
+**/build/
+*.log
+
+# === Credenciales y Archivos Sensibles de AWS ===
+*.pem
+*.csv
+**/application-secrets.yml
+**/aws-credentials.json
+.env
+.env.local
+.env.*.local
