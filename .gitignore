@@ -38,4 +38,6 @@ Thumbs.db
 **/aws-credentials.json
 .env
 .env.local
-.env.*.local
+.env.*.localbackend-pedidos/src/main/resources/application-local.properties
+backend-pedidos/src/main/resources/application-local.properties
+backend-pedidos/src/main/resources/application-local.properties

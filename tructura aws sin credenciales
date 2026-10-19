@@ -1,0 +1,50 @@
+[1mdiff --git a/backend-pedidos/src/main/resources/application.properties b/backend-pedidos/src/main/resources/application.properties[m
+[1mindex f503a75..af07910 100644[m
+[1m--- a/backend-pedidos/src/main/resources/application.properties[m
+[1m+++ b/backend-pedidos/src/main/resources/application.properties[m
+[36m@@ -1,27 +1,33 @@[m
+ server.port=8080[m
+ [m
+[32m+[m
+ # CONFIGURACIÓN ARANGODB OASIS (CLOUD)[m
+[31m-arangodb.host=857c16557e9b.arangodb.cloud[m
+[32m+[m[32marangodb.host=671a2376b362.arangodb.cloud[m
+ arangodb.port=8529[m
+ arangodb.user=root[m
+[31m-arangodb.password=wPrXkhTYcm7qrdRW29cg[m
+[32m+[m[32marangodb.password=mp5OW5fNvWM5IWkG3obn[m
+ arangodb.database=_system[m
+ arangodb.useSsl=true[m
+[32m+[m
+ # Cognito[m
+ spring.security.oauth2.resourceserver.jwt.issuer-uri=https://cognito-idp.us-east-1.amazonaws.com/us-east-1_dzuH5paum[m
+ [m
+ # CONFIGURACIÓN AWS (SNS / SQS)[m
+[32m+[m[32mspring.cloud.aws.region.static=us-east-1[m
+ aws.region.static=us-east-1[m
+ [m
+ # Tópico SNS[m
+[31m-aws.sns.pedidos-topic-arn=arn:aws:sns:us-east-1:123456789012:pedidos-events-topic[m
+[32m+[m[32maws.sns.pedidos-topic-arn=arn:aws:sns:us-east-1:868043516178:pedidos-topic[m
+ [m
+ # Colas SQS Principales[m
+[31m-aws.sqs.queues.notificaciones=pedidos-notificaciones-queue[m
+[31m-aws.sqs.queues.facturacion=pedidos-facturacion-queue[m
+[31m-aws.sqs.queues.inventario=pedidos-inventario-queue[m
+[32m+[m[32m# URLs de las Colas SQS (reemplaza con el nombre exacto de tus colas)[m
+[32m+[m[32maws.sqs.pedidos-queue-url=https://sqs.us-east-1.amazonaws.com/868043516178/pedidos-creados-queue[m
+[32m+[m[32maws.sqs.notificaciones-queue-url=https://sqs.us-east-1.amazonaws.com/868043516178/notificaciones-queue[m[41m  [m
+[32m+[m[32maws.sqs.Inventario-actualizado-queue-url=https://sqs.us-east-1.amazonaws.com/868043516178/inventario-actualizado-queue[m[41m [m
+[32m+[m[32maws.sqs.queues.notificaciones-dlq=https://sqs.us-east-1.amazonaws.com/868043516178/notificaciones-dlq[m[41m [m
+[32m+[m[32maws.sqs.queues.facturacion-dlq=https://sqs.us-east-1.amazonaws.com/868043516178/pedidos-creados-dlq[m[41m [m
+[32m+[m[32maws.sqs.queues.inventario-dlq=https://sqs.us-east-1.amazonaws.com/868043516178/inventario-actualizado-dlq[m[41m [m
+ [m
+[31m-# Dead Letter Queues (DLQ)[m
+[31m-aws.sqs.queues.notificaciones-dlq=pedidos-notificaciones-dlq[m
+[31m-aws.sqs.queues.facturacion-dlq=pedidos-facturacion-dlq[m
+[31m-aws.sqs.queues.inventario-dlq=pedidos-inventario-dlq[m
+\ No newline at end of file[m
+[32m+[m[32maws_access_key_id=ASIA4UG3M5EJA4AHZLM2[m
+[32m+[m[32maws_secret_access_key=y8RcygrGEUNCFjJXHYiwVH5qJkm3S1U9NkV+x4qr[m
+[32m+[m[32maws_session_token=IQoJb3JpZ2luX2VjEG0aCXVzLXdlc3QtMiJHMEUCIQCRRbx5NqRR5K+WHINLJ/Psb+Q4c+yldv3i+VXsmC26PQIgN12Ufc1F4XS8o156rNLV3sbB8Uulw8N9WM5foxxmpj4qvgIINhAAGgw4NjgwNDM1MTYxNzgiDHaBXetYUrTEjQj3oyqbAh2zCP+8BSvxVUSoUsc++KP2XaJGZDtmEHaMVjhUeRPihreN1RwH9XTfBoSlEAvV0hA3dnt08pdN96FK6unUP93xjks1HJYVztot1/ud16JHg9Hpbw6Ol32NjJFaCqiYIu1Qisqptiomn7fO5lfTMMnebem77JvU/nYe0X+Dvz2Ga0lj/wENQU41tX8PArK5eAl7qBPFtuViBZuQDDFEIZrdU2DxzCb0hLYpXoBVgoReEvqz2KKtNXk7133DuJENOdJZYdptz7bqSnHv29fpluJwItMIcXQ3osseK01PEDK0N3M66WioMMtvHapTI65tVaVMxt9+d4F6KXFo60gntDmUmfopyz33Sir21HUVMkn4DCqiVwGMll5165wwsvrZ1gY6nQGlxL3LcZrwpuElOsdqLZZNq7R3huI/LNmamhgPNnoTMXERupZcbc78DQBjDxz48Pg02Ukt+Oqcd2uL5a5FIU/i6tXVnb9lGs8wdQIXFFdqB8iboMQyesMRff4/w2EWZ0bvioVt+GZrPn7Yf55k/tq4Z6AzuhZLBfXlQ+iDxbWX/FLl92fP6t4NfBSetlALmljHrm94w9RYxDrbkQbb[m
+\ No newline at end of file[m
