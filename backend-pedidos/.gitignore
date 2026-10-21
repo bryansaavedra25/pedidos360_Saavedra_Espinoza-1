@@ -37,3 +37,5 @@ pedidos360.db
 /target/
 pedidos360.db
 /target/
+
+backend-pedidos/src/main/resources/aws-credentials.properties

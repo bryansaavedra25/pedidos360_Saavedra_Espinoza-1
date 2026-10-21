@@ -34,6 +34,11 @@ public class PedidoController {
         return pedidoService.crear(nuevo);
     }
 
+    @PutMapping("/{id}/completar")
+    public Pedido completar(@PathVariable String id) {
+        return pedidoService.completar(id);
+    }
+
     @DeleteMapping("/{id}") //Y aqui elimina el pedido por su ID
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void eliminar(@PathVariable String id) {

@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 //Interface para las operaciones CRUD en ArangoDB
 @Repository
 public interface PedidoRepository extends ArangoRepository<Pedido, String> {  
+
 }
